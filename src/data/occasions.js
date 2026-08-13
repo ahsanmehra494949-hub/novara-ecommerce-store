@@ -1,5 +1,4 @@
-// Key Pakistani occasions worth a store-wide sale. Islamic dates are estimates
-// (subject to moon sighting) and may shift by a day; update yearly as needed.
+
 export const occasions = [
   { id: 'kashmir-day-2026', name: 'Kashmir Day', emoji: '🖤', date: '2026-02-05' },
   { id: 'ramadan-2026', name: 'Ramadan', emoji: '🌙', date: '2026-02-19' },
