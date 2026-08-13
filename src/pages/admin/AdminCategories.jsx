@@ -29,7 +29,6 @@ export default function AdminCategories() {
   const openEdit = (c) => { setEditing(c); setForm({ name: c.name, icon: c.icon, image: c.image || '' }); setIconTouched(true); setModalOpen(true); };
 
   const handleNameChange = (name) => {
-    // Auto-suggest an icon while typing, unless the admin already picked their own.
     setForm((f) => ({ ...f, name, icon: iconTouched ? f.icon : suggestIcon(name) }));
   };
 
