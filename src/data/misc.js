@@ -10,9 +10,6 @@ export const promoBanners = [
   { id: 3, tag: 'Member Perk', title: 'Extra 10% Off For Members', cta: 'Join free', link: '/register', image: 'https://picsum.photos/seed/promo3/700/400' },
 ];
 
-// Starter brands — admins can replace these with real uploaded logos (or add
-// more) from Admin → Brands. Logo starts blank so the name shows until one
-// is uploaded.
 export const brandsList = [
   { id: 1, name: 'Novara', logo: '', enabled: true },
   { id: 2, name: 'Auralite', logo: '', enabled: true },
