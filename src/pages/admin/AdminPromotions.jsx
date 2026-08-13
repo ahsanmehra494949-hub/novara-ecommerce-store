@@ -14,9 +14,6 @@ import { addEvent, updateEvent, deleteEvent, toggleEvent, reorderEvents } from '
 const emptyRow = () => ({ productId: '', discountPercent: '' });
 const emptyForm = { eventName: '', rows: [emptyRow()] };
 
-// Applies (or reverts) the sale price on the actual product record, so every
-// existing price display (cards, product page, cart, wishlist) picks it up
-// automatically — no other component needs to know promotions exist.
 function applyDiscount(dispatch, product, percent) {
   const discountPrice = Math.round(product.price * (1 - percent / 100) * 100) / 100;
   dispatch(updateProduct({ id: product.id, discountPrice }));
@@ -70,7 +67,6 @@ export default function AdminPromotions() {
   );
 }
 
-// ───────────────────────── Sale Promotions ─────────────────────────
 function SalesPromotionsPanel() {
   const promotions = useSelector((s) => s.promotions.list);
   const products = useSelector((s) => s.catalog.products);
@@ -119,7 +115,7 @@ function SalesPromotionsPanel() {
     if (items.length === 0) { toast.error('Add at least one product with a discount'); return; }
 
     if (editing) {
-      // Revert whatever the old promotion had applied, then apply the new set.
+
       revertItems(dispatch, editing.items);
       const finalItems = items.map(({ productId, discountPercent, product }) => ({
         productId, discountPercent, prevDiscountPrice: product.discountPrice ?? null,
@@ -249,7 +245,6 @@ function SalesPromotionsPanel() {
   );
 }
 
-// ───────────────────────── Announcements (formerly Events) ─────────────────────────
 function AnnouncementsPanel() {
   const events = useSelector((s) => s.events.list);
   const dispatch = useDispatch();
