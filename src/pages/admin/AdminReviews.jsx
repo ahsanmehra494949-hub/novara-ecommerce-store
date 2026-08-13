@@ -10,7 +10,6 @@ export default function AdminReviews() {
   const reviews = useSelector((s) => s.reviews.list);
   const dispatch = useDispatch();
 
-  // Visiting this page acknowledges any new reviews — clears the sidebar badge.
   useEffect(() => {
     if (reviews.some((r) => !r.read)) dispatch(markAllReviewsRead());
   }, [dispatch, reviews]);
