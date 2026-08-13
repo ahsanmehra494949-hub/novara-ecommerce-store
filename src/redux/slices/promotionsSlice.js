@@ -1,9 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { loadState, saveState } from '../../utils/storage';
 
-// A promotion now holds a list of `items`, each with its own product and
-// discount % — so one event (e.g. "Eid Sale") can discount several products
-// by different amounts (40% off item A, 50% off item B, etc).
 const initialState = {
   list: loadState('novara_promotions', []),
 };
