@@ -3,9 +3,6 @@ import toast from 'react-hot-toast';
 import { FiUpload, FiX } from 'react-icons/fi';
 import { fileToCompressedDataUrl } from '../../utils/imageUpload';
 
-// A single-image "upload from your device" control. Shows a preview once an
-// image is picked, with a way to remove/replace it. Value is a compressed
-// data URL string (or '').
 export default function ImageUploadField({
   label,
   value,
