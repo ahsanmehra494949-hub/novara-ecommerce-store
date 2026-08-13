@@ -1,6 +1,4 @@
-// Reads a local image file and shrinks it down before turning it into a data
-// URL — keeps things fast and avoids blowing past localStorage's quota when
-// several photos are stored (the app persists everything on-device).
+
 export function fileToCompressedDataUrl(file, maxDim = 900, quality = 0.82) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
