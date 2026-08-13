@@ -1,6 +1,4 @@
-// Suggests a relevant emoji icon for a category name typed by the admin.
-// This is a lightweight keyword match — it only fills the icon field
-// automatically as a starting point; the admin can still overwrite it.
+
 const KEYWORD_ICONS = [
   [['electronic', 'gadget', 'phone', 'mobile', 'laptop', 'computer', 'audio', 'headphone'], '🎧'],
   [['fashion', 'cloth', 'apparel', 'wear', 'shirt', 'dress'], '👕'],
