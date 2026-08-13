@@ -1,7 +1,5 @@
 import { occasions } from '../data/occasions';
 
-// Returns the nearest occasion within `lookaheadDays` (default 21) from today,
-// or null if nothing is coming up soon.
 export function getUpcomingOccasion(lookaheadDays = 21) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
