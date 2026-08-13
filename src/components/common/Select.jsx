@@ -2,12 +2,6 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { FiChevronDown, FiCheck } from 'react-icons/fi';
 
-// Custom themed dropdown — replaces native <select>/<option>, which can't be
-// reliably styled cross-browser (native option lists ignore our dark/light
-// theme and can render with invisible text, or pop up detached from the
-// trigger). This renders its own panel via a portal, positioned next to the
-// trigger and flipped above it automatically when there isn't room below, so
-// it always looks intentional in both themes.
 export default function Select({
   value,
   onChange,
@@ -43,7 +37,6 @@ export default function Select({
 
   useLayoutEffect(() => {
     if (open) computePosition();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   useEffect(() => {
