@@ -86,7 +86,7 @@ export default function ProductDetails() {
       image: reviewForm.image,
     }));
 
-    // Keep the product's displayed rating in sync with real reviews.
+  
     const nextReviews = [{ rating: reviewForm.rating }, ...productReviews];
     const avg = nextReviews.reduce((sum, r) => sum + r.rating, 0) / nextReviews.length;
     dispatch(updateProduct({ id: product.id, rating: Math.round(avg * 10) / 10, reviewCount: nextReviews.length }));
