@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { loadState, saveState } from '../../utils/storage';
 
-// Real, customer-submitted reviews only — no seeded/fake reviews here.
+
 const initialState = {
   list: loadState('novara_reviews', []),
 };
